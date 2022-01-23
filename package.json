@@ -12,13 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.2",
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
-    "jest": "^25.4.0",
-    "nodemon": "^2.0.3",
-    "puppeteer": "^3.0.1"
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^3.3.0"
   }
 }
