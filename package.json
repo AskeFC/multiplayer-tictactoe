@@ -19,6 +19,6 @@
   "devDependencies": {
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
-    "puppeteer": "^20.1.0"
+    "puppeteer": "^20.1.2"
   }
 }
