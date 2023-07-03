@@ -4,6 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "nodestart": "node server.js --watch",
+    "bunstart": "bun server.js --watch",
     "devStart": "nodemon server.js",
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch"
