@@ -1,6 +1,6 @@
 'use strict';
 
-exports.setUserRole = (game) => {
+const setUserRole = (game) => {
     //Set circle or X for user
     if (!game.roles['circle'].taken) {
         game.roles['circle'].taken = true;
@@ -14,7 +14,7 @@ exports.setUserRole = (game) => {
     return 'spec';
 };
 
-exports.initGame = (game) => {
+const initGame = (game) => {
     game.active = true;
     game.tiles = {};
     game.turn = 'circle';
@@ -40,13 +40,13 @@ exports.initGame = (game) => {
     return game;
 };
 
-exports.swapTurns = (currentTurn) => {
+const swapTurns = (currentTurn) => {
     if (currentTurn === "circle") { return "x"; };
     if (currentTurn === "x") { return "circle"; };
     return;
 };
 
-exports.checkState = (game) => {
+const checkState = (game) => {
     const WINNING_COMBINATIONS = [
         ['cell0', 'cell1', 'cell2'],
         ['cell3', 'cell4', 'cell5'],
@@ -73,7 +73,7 @@ exports.checkState = (game) => {
     return false;
 };
 
-exports.getUserGames = (games, socketId) => {
+const getUserGames = (games, socketId) => {
     return Object.entries(games).reduce((names, [name, game]) => {
         if (game !== null) {
             if (game.users[socketId] != null) names.push(name);
@@ -83,4 +83,10 @@ exports.getUserGames = (games, socketId) => {
     }, []);
 };
 
-export default exports;
+export {
+    setUserRole,
+    initGame,
+    swapTurns,
+    checkState,
+    getUserGames
+};

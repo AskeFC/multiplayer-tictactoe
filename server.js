@@ -10,7 +10,7 @@ import {
     swapTurns,
     checkState,
     getUserGames
-} from './serverLogic';
+} from './serverLogic.js';
 
 const app = express();
 const server = createServer(app);
