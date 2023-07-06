@@ -1,15 +1,21 @@
-const express = require('express');
-const app = express();
-const server = require('http').Server(app);
-const io = require('socket.io')(server);
+'use strict';
 
-const { 
+import express from 'express';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
+
+import { 
     setUserRole,
     initGame,
     swapTurns,
     checkState,
     getUserGames
-} = require('./serverLogic');
+} from './serverLogic';
+
+const app = express();
+const server = createServer(app);
+const io = new Server(server);
+
 const games = {};
 
 app.set('views', './views');
