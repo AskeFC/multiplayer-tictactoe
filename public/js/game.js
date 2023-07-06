@@ -60,6 +60,13 @@ const getCookie = (cname) => {
 
 let userName                        = getCookie('name');
 
+const createUserNameCookie= () => {
+    userName = userNameInput.value;
+
+    document.cookie = `name=${userName}`;
+    promptUserNameContainer.classList.remove('show');
+};
+
 //Check if user's name is set
 if (!userName ||  !userName === "") {
     promptUserNameContainer.classList.add('show');
@@ -388,13 +395,6 @@ const sendChatMessage = (e) => {
         gameName: gameName,
         message: message
     });
-};
-
-const createUserNameCookie= () => {
-    userName = userNameInput.value;
-
-    document.cookie = `name=${userName}`;
-    promptUserNameContainer.classList.remove('show');
 };
 
 const setGameScore = (users = null) => {
