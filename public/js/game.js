@@ -332,7 +332,7 @@ const fillCheckedTiles = (tiles) => {
 };
 
 const setShapeColour= () => {
-    let css;
+    let css = '';
     if (userShape === 'circle' || userShape == 'spec') {
         css = `
             .cell.x::before,
@@ -344,9 +344,7 @@ const setShapeColour= () => {
                 background-color: #187BCD;
                 float: right;
             }
-        `,
-        head = document.head || document.getElementsByTagName('head')[0],
-        style = document.createElement('style');
+        `;
      } else if (userShape === 'x') {
         css = `
             .cell.x::before,
@@ -358,14 +356,13 @@ const setShapeColour= () => {
                 background-color: rgb(156, 31, 31);
                 float: left;
             }
-        `,
-        head = document.head || document.getElementsByTagName('head')[0],
-        style = document.createElement('style');
-    };
-
-    head.appendChild(style);
+        `;
+    } else { return; };
+    let style = document.createElement('style');
     style.type = 'text/css';
     style.appendChild(document.createTextNode(css));
+    const head = document.head || document.getElementsByTagName('head')[0];
+    head.appendChild(style);
 };
 
 const sendChatMessage = (e) => {
