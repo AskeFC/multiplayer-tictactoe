@@ -27,7 +27,7 @@ const toggleDarkMode = () => {
 };
 
 const checkDarkMode = () => {
-    darkModeCookie = getCookie('darkMode');
+    const darkModeCookie = getCookie('darkMode');
     if (darkModeCookie === "true") {
         document.body.classList.add('dark');
         document.getElementById('dark-mode-checkbox').checked = true;
