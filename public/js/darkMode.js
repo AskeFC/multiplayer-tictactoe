@@ -26,7 +26,7 @@ const toggleDarkMode = () => {
     };
 };
 
-const checkDarkMode= () => {
+const checkDarkMode = () => {
     darkModeCookie = getCookie('darkMode');
     if (darkModeCookie === "true") {
         document.body.classList.add('dark');
