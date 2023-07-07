@@ -1,6 +1,6 @@
 'use strict';
 
-const socket                        = io('http://localhost:3000');
+const socket                        = io();
 const X_CLASS                       = 'x';
 const CIRCLE_CLASS                  = 'circle';
 
