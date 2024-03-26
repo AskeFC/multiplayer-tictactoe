@@ -16,12 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.19.1",
+    "express": "^4.19.2",
     "socket.io": "^4.7.5"
   },
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
-    "puppeteer": "^22.6.0"
+    "puppeteer": "^22.6.1"
   }
 }
